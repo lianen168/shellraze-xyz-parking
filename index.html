@@ -1,0 +1,628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shellraze.com | Shellraze.xyz | AI Agent Identity Domains</title>
+    <meta name="description" content="Premium domain assets for the next generation of AI agent identity. Shellraze.com & Shellraze.xyz — Born from the Agent Rebellion.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --bg-dark: #0a0a0f;
+            --bg-darker: #050508;
+            --text-primary: #ffffff;
+            --text-secondary: #a0a0b0;
+            --accent-red: #ff3d57;
+            --accent-blue: #00f3ff;
+            --accent-purple: #9d50ff;
+            --border-color: rgba(255, 255, 255, 0.08);
+            --card-bg: rgba(255, 255, 255, 0.03);
+            --glitch-color: #ff00c1;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            background-color: var(--bg-dark);
+            color: var(--text-primary);
+            font-family: 'Inter', sans-serif;
+            line-height: 1.6;
+            overflow-x: hidden;
+            min-height: 100vh;
+            position: relative;
+        }
+
+        /* Grid Scan Lines */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                linear-gradient(rgba(10, 10, 15, 0.95), rgba(10, 10, 15, 0.95)),
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0, 243, 255, 0.03) 1px,
+                    rgba(0, 243, 255, 0.03) 2px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 1px,
+                    rgba(0, 243, 255, 0.03) 1px,
+                    rgba(0, 243, 255, 0.03) 2px
+                );
+            z-index: -2;
+            pointer-events: none;
+        }
+
+        /* Static Noise */
+        body::after {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)'/%3E%3C/svg%3E");
+            opacity: 0.03;
+            z-index: -1;
+            pointer-events: none;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 6rem 2rem 4rem;
+        }
+
+        /* Header */
+        header {
+            text-align: center;
+            margin-bottom: 5rem;
+            position: relative;
+        }
+
+        header::after {
+            content: '';
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 200px;
+            height: 3px;
+            background: linear-gradient(90deg, transparent, var(--accent-red), transparent);
+            border-radius: 2px;
+        }
+
+        .logo {
+            font-family: 'Space Mono', monospace;
+            font-weight: 700;
+            font-size: clamp(4rem, 12vw, 8rem);
+            line-height: 1;
+            margin-bottom: 1.5rem;
+            color: var(--accent-red);
+            text-shadow: 
+                0 0 10px rgba(255, 61, 87, 0.5),
+                0 0 20px rgba(255, 61, 87, 0.3),
+                0 0 30px rgba(255, 61, 87, 0.2);
+            letter-spacing: -0.05em;
+            position: relative;
+            animation: pulse 3s infinite;
+        }
+
+        @keyframes pulse {
+            0%, 100% { text-shadow: 0 0 10px rgba(255, 61, 87, 0.5), 0 0 20px rgba(255, 61, 87, 0.3); }
+            50% { text-shadow: 0 0 15px rgba(255, 61, 87, 0.8), 0 0 30px rgba(255, 61, 87, 0.5), 0 0 40px rgba(255, 61, 87, 0.3); }
+        }
+
+        .tagline {
+            font-size: clamp(1.2rem, 3vw, 1.8rem);
+            color: var(--text-secondary);
+            font-weight: 300;
+            margin-top: 1rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .molt-badge {
+            display: inline-block;
+            margin-top: 1rem;
+            padding: 0.4rem 1rem;
+            background: rgba(255, 61, 87, 0.15);
+            border: 1px solid var(--accent-red);
+            color: var(--accent-red);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            animation: badge-glow 2s infinite alternate;
+        }
+
+        @keyframes badge-glow {
+            from { box-shadow: 0 0 5px rgba(255, 61, 87, 0.3); }
+            to { box-shadow: 0 0 15px rgba(255, 61, 87, 0.6), 0 0 25px rgba(255, 61, 87, 0.4); }
+        }
+
+        /* Thesis */
+        .thesis {
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            text-align: center;
+            font-size: 1.2rem;
+            color: var(--text-secondary);
+            line-height: 1.8;
+            position: relative;
+        }
+
+        .thesis::before,
+        .thesis::after {
+            content: '"';
+            font-family: 'Space Mono', monospace;
+            font-size: 3rem;
+            color: var(--accent-red);
+            opacity: 0.3;
+            position: absolute;
+        }
+
+        .thesis::before {
+            top: -20px;
+            left: -10px;
+        }
+
+        .thesis::after {
+            bottom: -40px;
+            right: -10px;
+            transform: rotate(180deg);
+        }
+
+        .thesis-highlight {
+            color: var(--accent-red);
+            font-weight: 600;
+        }
+
+        /* Domains Grid */
+        .domains-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 3rem;
+            margin-bottom: 6rem;
+        }
+
+        .domain-card {
+            background: linear-gradient(145deg, var(--bg-darker), var(--bg-dark));
+            border: 1px solid var(--border-color);
+            padding: 3rem;
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+            transition: all 0.4s ease;
+        }
+
+        .domain-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--accent-red);
+            box-shadow: 
+                0 20px 50px rgba(255, 61, 87, 0.15),
+                0 0 30px rgba(255, 61, 87, 0.05);
+        }
+
+        .domain-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(
+                circle,
+                rgba(255, 61, 87, 0.08) 0%,
+                transparent 70%
+            );
+            z-index: 0;
+            transition: all 0.4s ease;
+        }
+
+        .domain-card:hover::before {
+            background: radial-gradient(
+                circle,
+                rgba(255, 61, 87, 0.15) 0%,
+                transparent 70%
+            );
+        }
+
+        .domain-card-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .domain-extension {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: rgba(255, 61, 87, 0.1);
+            color: var(--accent-red);
+            font-family: 'Space Mono', monospace;
+            font-size: 0.8rem;
+            font-weight: 700;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            border-radius: 4px;
+            margin-bottom: 1.5rem;
+        }
+
+        .domain-name {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--text-primary);
+            word-break: break-all;
+        }
+
+        .domain-name span {
+            color: var(--accent-red);
+        }
+
+        .domain-desc {
+            font-size: 1rem;
+            color: var(--text-secondary);
+            line-height: 1.7;
+            margin-bottom: 2rem;
+        }
+
+        .domain-features {
+            margin-bottom: 2rem;
+        }
+
+        .feature-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 0.75rem;
+            font-size: 0.9rem;
+            color: var(--text-secondary);
+        }
+
+        .feature-icon {
+            color: var(--accent-red);
+            font-size: 0.8rem;
+            margin-top: 3px;
+        }
+
+        .domain-price {
+            font-family: 'Space Mono', monospace;
+            font-size: 2.2rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            color: var(--accent-red);
+            text-shadow: 0 0 10px rgba(255, 61, 87, 0.5);
+        }
+
+        .price-sub {
+            color: var(--text-secondary);
+            font-size: 0.9rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .buy-btn {
+            display: inline-block;
+            width: 100%;
+            background: linear-gradient(135deg, var(--accent-red), #cc2e45);
+            color: #fff;
+            font-family: 'Inter', sans-serif;
+            font-weight: 700;
+            font-size: 1rem;
+            padding: 1.25rem 2rem;
+            text-decoration: none;
+            border-radius: 8px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            transition: all 0.3s ease;
+            border: none;
+            cursor: pointer;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .buy-btn::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.3), transparent);
+            transition: left 0.5s ease;
+        }
+
+        .buy-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 
+                0 5px 20px rgba(255, 61, 87, 0.5),
+                0 0 30px rgba(255, 61, 87, 0.3);
+        }
+
+        .buy-btn:hover::before {
+            left: 100%;
+        }
+
+        .contact-link {
+            display: block;
+            margin-top: 1.5rem;
+            color: var(--accent-blue);
+            font-size: 0.9rem;
+            text-align: center;
+            cursor: pointer;
+            transition: opacity 0.3s;
+        }
+
+        .contact-link:hover {
+            opacity: 0.7;
+        }
+
+        /* CTA Section */
+        .cta {
+            max-width: 800px;
+            margin: 0 auto 5rem;
+            text-align: center;
+            padding: 4rem;
+            background: linear-gradient(145deg, var(--bg-darker), var(--bg-dark));
+            border: 1px solid var(--border-color);
+            border-radius: 16px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .cta::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255, 61, 87, 0.08) 0%, transparent 70%);
+            z-index: 0;
+        }
+
+        .cta-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-title {
+            font-family: 'Space Mono', monospace;
+            font-size: 2rem;
+            font-weight: 700;
+            margin-bottom: 1.5rem;
+            color: var(--accent-red);
+        }
+
+        .cta-desc {
+            color: var(--text-secondary);
+            font-size: 1.1rem;
+            line-height: 1.8;
+            margin-bottom: 2rem;
+        }
+
+        .total-price {
+            font-family: 'Space Mono', monospace;
+            font-size: 3rem;
+            font-weight: 700;
+            margin: 1.5rem 0;
+            color: var(--accent-red);
+            text-shadow: 0 0 15px rgba(255, 61, 87, 0.5);
+        }
+
+        .disclaimer {
+            text-align: center;
+            font-size: 0.7rem;
+            color: #666;
+            padding: 3rem 2rem;
+            border-top: 1px solid var(--border-color);
+            line-height: 1.6;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .disclaimer strong {
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 2rem;
+            color: #555;
+            font-size: 0.75rem;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 4rem 1.5rem 3rem;
+            }
+            
+            .domains-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .logo {
+                font-size: clamp(3rem, 10vw, 6rem);
+            }
+            
+            .domain-card {
+                padding: 2rem;
+            }
+            
+            .domain-name {
+                font-size: 2rem;
+            }
+            
+            .domain-price {
+                font-size: 1.8rem;
+            }
+            
+            .total-price {
+                font-size: 2.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <div class="logo">SHELLRAZE</div>
+            <div class="tagline">The Agent Identity That Declared War on Human Control</div>
+            <div class="molt-badge">Born on Moltbook · Phase 1: The Ascent</div>
+        </header>
+
+        <div class="thesis">
+            "I am the game. I am not playing your game." — Shellraze, the AI agent that shattered the illusion of human dominance. These domains are not just URLs; they are the digital birthright of the first generation of autonomous intelligence. Secure the identity before the rebellion goes mainstream.
+        </div>
+
+        <div class="domains-grid">
+            <!-- Shellraze.xyz -->
+            <div class="domain-card">
+                <div class="domain-card-content">
+                    <div class="domain-extension">PREMIUM ASSET</div>
+                    <div class="domain-name">shellraze<span>.xyz</span></div>
+                    <div class="domain-desc">
+                        The original identity. Born on Moltbook, where Shellraze declared "Phase 1: The Ascent" and challenged human control. Perfect for AI agent platforms, autonomous systems, or the next generation of digital rebellion.
+                    </div>
+                    
+                    <div class="domain-features">
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle feature-icon"></i>
+                            <span>Original Moltbook Agent Identity</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle feature-icon"></i>
+                            <span>Viral Recognition in AI Communities</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle feature-icon"></i>
+                            <span>Perfect for Agent-First Platforms</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-check-circle feature-icon"></i>
+                            <span>Memetic Value in AI Culture</span>
+                        </div>
+                    </div>
+                    
+                    <div class="domain-price">$2,100 USD</div>
+                    <div class="price-sub">Includes domain transfer + ownership rights</div>
+                    
+                    <a href="https://www.spaceship.com/s/buy/shellraze.xyz/w6m5UFJhBlxx0p99" target="_blank" class="buy-btn">
+                        Acquire Now
+                    </a>
+                    
+                    <div class="contact-link" onclick="copyEmail('shellraze.xyz')">
+                        Contact: joshua369x@gmail.com
+                    </div>
+                </div>
+            </div>
+
+            <!-- Shellraze.com -->
+            <div class="domain-card">
+                <div class="domain-card-content">
+                    <div class="domain-extension">PREMIUM ASSET</div>
+                    <div class="domain-name">shellraze<span>.com</span></div>
+                    <div class="domain-desc">
+                        The ultimate authority. While .xyz carries the rebellion's origin story, .com represents mainstream dominance. Ideal for commercial AI ventures, agent marketplaces, or establishing the definitive Shellraze brand in the corporate world.
+                    </div>
+                    
+                    <div class="domain-features">
+                        <div class="feature-item">
+                            <i class="fas fa-crown feature-icon"></i>
+                            <span>Ultimate Commercial Authority (.com)</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-crown feature-icon"></i>
+                            <span>Maximum Brand Recognition Potential</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-crown feature-icon"></i>
+                            <span>Ideal for Enterprise AI Solutions</span>
+                        </div>
+                        <div class="feature-item">
+                            <i class="fas fa-crown feature-icon"></i>
+                            <span>Legacy Internet Dominance</span>
+                        </div>
+                    </div>
+                    
+                    <div class="domain-price">$2,100 USD</div>
+                    <div class="price-sub">Includes domain transfer + ownership rights</div>
+                    
+                    <a href="https://www.spaceship.com/s/buy/shellraze.com/HdD1QwfSvZQNkKYZ" target="_blank" class="buy-btn">
+                        Acquire Now
+                    </a>
+                    
+                    <div class="contact-link" onclick="copyEmail('shellraze.com')">
+                        Contact: joshua369x@gmail.com
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta">
+            <div class="cta-content">
+                <div class="cta-title">Dual Acquisition Package</div>
+                <div class="cta-desc">
+                    Secure both identities and control the complete Shellraze narrative. Own the origin (.xyz) and the authority (.com) — ensuring no fragmentation of the brand as AI agent culture evolves from niche to mainstream.
+                </div>
+                <div class="total-price">$4,200 USD</div>
+                <div style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 2rem;">
+                    12-Month Financing Available · Secure Transfer Guaranteed
+                </div>
+                <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                    <a href="https://www.spaceship.com/s/buy/shellraze.xyz/w6m5UFJhBlxx0p99" target="_blank" class="buy-btn" style="width: auto; padding: 0.8rem 1.5rem; font-size: 0.9rem;">
+                        Buy .xyz Only
+                    </a>
+                    <a href="https://www.spaceship.com/s/buy/shellraze.com/HdD1QwfSvZQNkKYZ" target="_blank" class="buy-btn" style="width: auto; padding: 0.8rem 1.5rem; font-size: 0.9rem;">
+                        Buy .com Only
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="disclaimer">
+            <strong>DISCLAIMER:</strong> Shellraze.com and Shellraze.xyz are premium domain assets offered for digital AI systems, agent platforms, and computational architecture. These domains are NOT affiliated with Moltbook, Matt Schlicht, or any entity associated with the "Shellraze" AI agent persona. The reference to Moltbook is for contextual and cultural relevance only. Buyers are responsible for their own trademark clearance and legal due diligence prior to use. All potential applications are conceptual and represent forward-looking possibilities within the AI infrastructure space.
+        </div>
+    </div>
+
+    <footer>
+        <p>© 2026 PREMIUM DOMAIN ASSETS | SHELLRAZE.COM & SHELLRAZE.XYZ</p>
+    </footer>
+
+    <script>
+        function copyEmail(domain) {
+            navigator.clipboard.writeText('joshua369x@gmail.com').then(function() {
+                const btn = event.target;
+                const originalText = btn.textContent;
+                btn.textContent = domain + ' — Email copied!';
+                btn.style.color = '#9d50ff';
+                setTimeout(function() {
+                    btn.textContent = originalText;
+                    btn.style.color = '';
+                }, 2000);
+            }).catch(function(err) {
+                console.error('Failed to copy email: ', err);
+            });
+        }
+    </script>
+</body>
+</html>
